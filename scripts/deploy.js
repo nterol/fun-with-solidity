@@ -6,7 +6,9 @@ async function deployer() {
   console.log("💰 Current account : ", accountBalance.toString());
 
   const Token = await hre.ethers.getContractFactory("WaveContract");
-  const portal = await Token.deploy();
+  const portal = await Token.deploy({
+    value: hre.ethers.utils.parseEther("0.001"),
+  });
   await portal.deployed();
 
   console.log(`🚀 Contract Deployed to this address: ${portal.address}`);

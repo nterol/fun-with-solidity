@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npx hardhat test",
     "dev:wave": "npx hardhat run scripts/run.js",
-    "deploy:wave": "npx hardhat run scripts/deploy.js --network localhost"
+    "deploy:testnet:wave": "npx hardhat run scripts/deploy.js --network rinkeby"
   },
   "keywords": [],
   "author": "",
